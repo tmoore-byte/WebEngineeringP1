@@ -1,86 +1,85 @@
-<!Doctype HTML>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
+
+<head>
     <title>Thomas Moore</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="stylesheet.css">
-    </head>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
 
+<body class="home">
+    <div id="loader"></div> <!-- Loading animation -->
+    <header class="header" role="banner">
+        <div class="row">
+            <!-- Add different pages here maybe in header banner -->
+        </div>
+    </header>
 
-    <body class="home">
-        <div class="wrapper"></div>
-        <header class="header" role="banner">
-            <div class="row">
-                <!-- I can add different pages here maybe in header banner-->
-            </div>
-        </header>
-
-        <!--making the main section now-->
-        <main class="main" role="main">
-            <!--this adds my name on the site-->
+    <main class="main" role="main">
+        <div class="wrapper">
             <div class="col">
-                <h1>
-                    Thomas Moore
-                </h1>
-                <div class="col">
-                    <img src="https://whirlwindwheelchair.org/wp-content/uploads/2015/04/chapman-university-logo.jpg" 
-                    alt="chapman logo">
+                <h1>Thomas Moore</h1>
+                <div class="logo">
+                    <img src="https://whirlwindwheelchair.org/wp-content/uploads/2015/04/chapman-university-logo.jpg"
+                        alt="chapman logo">
                 </div>
                 <p>
-                    I am a Data Analytics major and Business Administration minor at Chapman University.
-                    where I will be graduating in 2022. 
-                    My objective is to be a Data Analyst at an industry-leading company where I can plug 
-                    into a high-performing team, build impactful models, and be challenged daily.
+                    I am a Data Analytics graduate from Chapman University where I was also a member of the Baseball team
+                    and Pi Kappa Alpha Fraternity. My objective is to be a Data Analyst at an industry-leading company
+                    where I can plug into a high-performing team, build impactful models, and be challenged daily. I am an
+                    incredibly driven and positive person who can make a great teammate.
                 </p>
                 <p>
-                    <a href="https://www.linkedin.com/in/thomas-moore-4b08371b6/" class="text-link">My LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/thomas-moore-4b08371b6" class="text-link">My LinkedIn</a>
                 </p>
                 <p>
                     <a href="https://github.com/tmoore-byte" class="text-link">My Github</a>
                 </p>
                 <p>
-                    <a href="#work" class="view-work"></a>
+                    <a href="#work" class="view-work">View Work</a>
                 </p>
             </div>
-            
 
-            <!--adding the projects and relevant courses-->
             <div class="proj" id="work">
                 <h2>Projects</h2>
                 <ul>
-                    <li>
-                        <a href="https://github.com/tmoore-byte/408_A3" class="text-link">Student Database Project (python and sql)</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/tmoore-byte/datastructuresA3" class="text-link">Data Structures Delimeter Program (c++)</a>
-                    </li>
-                    <li>
-                        <a href="https://colab.research.google.com/drive/1KSEVrLMFJV4JatF2pLrYehDbpSz5fTgB" class="text-link">Donut Classification Project (python)</a>
-                    </li>
+                    <li><a href="https://github.com/tmoore-byte/408_A3" class="text-link">Student Database Project
+                            (Python and SQL)</a></li>
+                    <li><a href="https://github.com/tmoore-byte/datastructuresA3" class="text-link">Data Structures
+                            Delimiter Program (C++)</a></li>
+                    <li><a href="https://colab.research.google.com/drive/1KSEVrLMFJV4JatF2pLrYehDbpSz5fTgB"
+                            class="text-link">Donut Classification Project (Python)</a></li>
                 </ul>
             </div>
+
             <div class="proj" id="other-work">
                 <h2>Other Work</h2>
                 <ul>
-                    <li>
-                        Cofounder and CFO of "Butter Boys" (june 2015 - August 2016) a non-profit company where we raised
-                        over $2,000 in the span of the deployment of our project which we gave all to Lucile Packard's Children Hospital
-                        in San Jose, CA.
-                    </li>
+                    <li>Cofounder and CFO of "Butter Boys" (June 2015 - August 2016), a non-profit company where we raised
+                        over $2,000 for Lucile Packard's Children Hospital in San Jose, CA.</li>
                 </ul>
             </div>
+        </div>
+
         <footer>
             <div class="col">
-                <h3>
-                    Contact
-                </h3>
+                <h3>Contact</h3>
                 <ul>
-                    <li><a href="www.google.com" class="text-link">thomas_moore@fakeEmail.com</a></li>
-                    <li><a href="www.google.com" class="text-link">(XXX)XXX-XXXX</a></li>
+                    <li><a href="mailto:thomasmoore0315@gmail.com" class="text-link">thomasmoore0315@gmail.com</a></li>
+                    <li><a href="tel:+14085060688" class="text-link">(408) 506-0688</a></li>
                 </ul>
             </div>
         </footer>
-        </main>
-    </body>
+    </main>
 
-        
+    <script>
+        // Hide loader when page is fully loaded
+        window.addEventListener('load', function () {
+            const loader = document.getElementById('loader');
+            loader.style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>

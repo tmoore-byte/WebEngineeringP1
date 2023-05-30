@@ -1,57 +1,111 @@
-* h1, h2, h3, p, ul, li{
-color: mintcream;
-
-}
-
-
-.home{
-  background: rgb(138, 0, 0) ;
-}
-
-
-.wrapper{
-  box-sizing: border-box;
-  max-width: 1138px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-*{
-  font-family: Roboto Mono,Courier,Helvitica,arial,sans-serif;
-  line-height: 1.5;
-}
-
-.main{
-  position:relative;
-  display: block;
-  max-width: 100%;
-  margin: 3.2rem;
-}
-
-.col{
-  flex-basis: 100%;
-  max-width: 100%;
-  padding-right: .05rem;
-  padding-left: 0.5rem;
-}
-
-.view-work{
+/* Add this CSS for the button hover effect */
+.view-work {
   position: relative;
-}
-
-
-.proj{
-  box-sizing: border-box;
-  display: flex;
-  flex: 0 1 auto;
-  flex-direction: wrap;
-  margin-right: -.5rem;
-  margin-left: -.5rem;
-  margin-top: 4rem;
-}
-
-.text-link{
   display: inline-block;
-  color: mintcream;
+  padding: 8px 16px;
+  background-color: #555;
+  color: #FFF;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
+.view-work:hover {
+  background-color: #222;
+}
+
+.view-work::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.view-work:hover::after {
+  opacity: 1;
+}
+
+/* Add this CSS for the loading animation */
+#loader {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  z-index: 9999;
+}
+
+/* Customize the loading animation */
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#loader::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+  border-radius: 50%;
+  border: 4px solid #8a1e1e;
+  border-top-color: #222;
+  animation: spinner 0.8s linear infinite;
+}
+
+/* Updated styles for mobile devices */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .wrapper {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  footer h3 {
+    font-size: 18px;
+  }
+}
+
+/* Additional styles for improved mobile view */
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  .header .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo img {
+    max-width: 200px;
+  }
+}
